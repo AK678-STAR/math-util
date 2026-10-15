@@ -1,6 +1,8 @@
 # Welcome to Math Utility
 
-You will find in this repo the following stuff:
+[![Math Utility Project (CI included) | © 2026 by AK678-STAR](https://github.com/AK678-STAR/math-util/actions/workflows/ci-script.yml/badge.svg)](https://github.com/AK678-STAR/math-util/actions/workflows/ci-script.yml)
+
+### You will find in this repo the following stuff:
 * A Maven project to implement Math Util library
 * A JUnit source code to demonstrate the Unit Testing, TDD & DDT technique
 * A CI script to check and build the project automatically with GitHub Actions

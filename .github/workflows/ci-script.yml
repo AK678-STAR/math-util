@@ -130,10 +130,8 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v6
         with:
-          # Tên artifact khi tải về từ GitHub UI.
-          # Thêm ${{ github.run_number }} để mỗi lần build có tên riêng,
-          # tránh ghi đè lẫn nhau.
-          name: download_ngoc_trinh-${{ github.run_number }}
+          # Tên artifact khi tải về từ GitHub UI (đã đổi tên thanh lịch).
+          name: link_de_tai-${{ github.run_number }}
 
           # Đường dẫn thư mục chứa file cần upload
           path: staging
@@ -146,27 +144,3 @@ jobs:
 
           # Nếu thư mục rỗng -> báo LỖI, không cho pipeline pass giả
           if-no-files-found: error
-
-
-# =====================================================================
-#  📚 GHI CHÚ KỸ THUẬT
-# =====================================================================
-#
-#  1. Cấu trúc YAML: indent bằng SPACE (2 spaces), KHÔNG dùng TAB.
-#
-#  2. Không commit secret (token, password) vào repo.
-#     Nếu cần dùng, khai báo trong GitHub Secrets và tham chiếu qua
-#     cú pháp:  ${{ secrets.TEN_BIEN }}
-#
-#  3. GitHub Actions free tier cho tài khoản cá nhân:
-#     - Private repo: 2000 phút/tháng
-#     - Public repo : miễn phí không giới hạn
-#
-#  4. Mở rộng (tuỳ chọn):
-#     - Build đa phiên bản Java: dùng strategy.matrix
-#         strategy:
-#           matrix:
-#             java-version: [17, 21]
-#     - Gửi thông báo khi build fail: dùng  if: failure()  + curl webhook
-#
-# =====================================================================

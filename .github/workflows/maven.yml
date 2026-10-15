@@ -1,6 +1,6 @@
 # =====================================================================
 #  MATH UTILITY PROJECT - CI PIPELINE
-#  © 2026 by giáo.làng
+#  © 2026 by AK678-STAR
 # ---------------------------------------------------------------------
 #  Mục đích: Tự động build + test project Java/Maven mỗi khi có code
 #            được push lên nhánh main hoặc có Pull Request vào main.
